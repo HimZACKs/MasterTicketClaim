@@ -2,61 +2,45 @@
 
 # 🚀 ClaimMaster for BetterDiscord
 
-**ClaimMaster** es un plugin de automatización para Discord diseñado para reclamar tickets de soporte de forma instantánea y visual. A diferencia de otros bots, ClaimMaster "lee" la pantalla para detectar botones, lo que lo hace extremadamente robusto frente a las actualizaciones internas de Discord.
+**ClaimMaster** es un plugin de automatización de alto rendimiento diseñado para reclamar tickets de soporte de forma instantánea. A diferencia de los métodos tradicionales que fallan con las actualizaciones de Discord, ClaimMaster utiliza **detección visual de elementos**, lo que lo hace prácticamente inmune a los cambios de código interno de la plataforma.
 
 ---
 
-## ✨ Características Principales
+## ✨ Características
 
-* **Detección Visual:** Escanea el chat en tiempo real buscando botones de interacción.
-* **Coincidencia Exacta:** Gracias a su motor de búsqueda por palabras completas, diferencia inteligentemente entre botones como "Claim" y "Unclaim".
-* **Anti-Detección:** Incluye un sistema de retraso aleatorio (Random Delay) para simular el comportamiento humano y evitar sanciones.
-* **Filtro por Canal:** Puedes restringir el funcionamiento a un ID de canal específico para evitar clics accidentales en otros chats.
-* **Panel de Configuración:** Interfaz integrada en BetterDiscord para cambiar palabras clave y tiempos sin tocar el código.
+* **Detección por DOM:** Escanea el chat en tiempo real buscando botones activos.
+* **Filtro de Palabra Exacta:** Olvida los falsos positivos. Si configuras "claim", el plugin ignorará automáticamente botones como "unclaim".
+* **Simulación Humana:** Sistema de retraso (delay) aleatorio para evitar sospechas y errores de "Too Many Requests".
+* **Filtro por Canal:** Puedes fijar un ID de canal específico para que el plugin solo trabaje donde tú quieras.
+* **Panel de Ajustes:** Interfaz nativa para configurar todo sin tocar una sola línea de código.
 
 ---
 
 ## 🛠️ Instalación
 
 1. Asegúrate de tener instalado [BetterDiscord](https://betterdiscord.app/).
-2. Descarga el archivo `ClaimMaster.plugin.js`.
-3. Abre Discord y ve a **Ajustes de Usuario > Plugins**.
-4. Haz clic en el botón **Open Plugins Folder** (Abrir carpeta de plugins).
-5. Copia el archivo `ClaimMaster.plugin.js` dentro de esa carpeta.
-6. Activa el plugin desde la lista en Discord.
+2. Crea un archivo llamado `ClaimMaster.plugin.js` en tu carpeta de plugins.
+3. Pega el código del plugin dentro del archivo.
+4. Activa **ClaimMaster** en los ajustes de Discord > Plugins.
 
 ---
 
-## ⚙️ Configuración
+## ⚙️ Cómo se usa
 
-Una vez activado, haz clic en el icono del **engranaje** junto al nombre del plugin para abrir el panel de ajustes:
+Una vez activado, ve a los ajustes del plugin (icono del engranaje) para configurar tu estrategia:
 
-| Ajuste | Descripción |
-| --- | --- |
-| **Palabras Clave** | Lista de palabras que el plugin buscará en los botones (ej: `reclamar, claim`). |
-| **ID del Canal** | (Opcional) Pega aquí el ID del canal donde aparecen los avisos de tickets. |
-| **Delay Mín/Máx** | Rango de tiempo en milisegundos que el plugin esperará antes de hacer clic. |
+1. **Palabras Clave Exactas:** Escribe las palabras que aparecen en el botón que quieres pulsar (ej. `reclamar, claim, atender`). Sepáralas por comas.
+2. **ID del Canal (Opcional):** Si quieres que solo funcione en un canal específico, pega el ID aquí.
+* *Tip:* Para obtener el ID, activa el "Modo Desarrollador" en Discord, haz clic derecho al canal y dale a "Copiar ID".
 
-> **Nota:** Para obtener el ID de un canal, activa el **Modo Desarrollador** en Discord (Ajustes > Avanzado), haz clic derecho sobre el canal y selecciona **Copiar ID**.
 
----
-
-## ⚠️ Advertencia de Seguridad
-
-Este plugin ha sido diseñado con medidas de seguridad como retrasos aleatorios y prevención de doble clic; sin embargo, el uso de automatizaciones en Discord va en contra de sus **Términos de Servicio**.
-
-* Úsalo con moderación.
-* No pongas retrasos (delays) demasiado bajos (menos de 500ms).
-* El autor no se hace responsable de posibles sanciones en tu cuenta.
+3. **Delays:** Ajusta el tiempo de espera mínimo y máximo. Un rango de `1000ms` a `2000ms` es ideal para que parezca natural.
+4. **Guardar:** Dale al botón azul y ¡listo! El plugin empezará a vigilar el chat.
 
 ---
 
-## 📝 Registro de Cambios (Changelog)
+## ⚠️ Advertencia
 
-### v1.0.0
-
-* Implementación de motor de búsqueda visual (MutationObserver).
-* Corrección del bug de falsos positivos con la palabra "unclaim".
-* Añadido panel de ajustes dinámico.
+El uso de scripts de automatización puede ir en contra de los Términos de Servicio de Discord. Úsalo bajo tu propia responsabilidad y evita usar tiempos de respuesta extremadamente bajos (menos de 500ms) para proteger tu cuenta.
 
 ---
