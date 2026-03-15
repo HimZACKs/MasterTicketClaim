@@ -1,5 +1,3 @@
----
-
 # 🚀 ClaimMaster for BetterDiscord
 
 **ClaimMaster** es un plugin de automatización de alto rendimiento diseñado para reclamar tickets de soporte de forma instantánea. A diferencia de los métodos tradicionales que fallan con las actualizaciones de Discord, ClaimMaster utiliza **detección visual de elementos**, lo que lo hace prácticamente inmune a los cambios de código interno de la plataforma.
