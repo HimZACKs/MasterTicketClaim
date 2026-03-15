@@ -1,6 +1,6 @@
 # 🚀 ClaimMaster for BetterDiscord
 
-**ClaimMaster** es un plugin de automatización de alto rendimiento diseñado para reclamar tickets de soporte de forma instantánea. A diferencia de los métodos tradicionales que fallan con las actualizaciones de Discord, ClaimMaster utiliza **detección visual de elementos**, lo que lo hace prácticamente inmune a los cambios de código interno de la plataforma.
+**ClaimMaster** es un plugin hecho por mi persona, hecho especialmente para los staffs que quieren farmear evidencias como locos. Es un plugin bastante completo que basicamente detecta el boton de Claim **(Depende de la palabra que le hayas puesto)** y hace una simulación de que un humano clickea en un tiempo asignado el boton de Claim del ticket.  
 
 ---
 
@@ -20,20 +20,19 @@
 2. Crea un archivo llamado `ClaimMaster.plugin.js` en tu carpeta de plugins.
 3. Pega el código del plugin dentro del archivo.
 4. Activa **ClaimMaster** en los ajustes de Discord > Plugins.
+5. Dirigete al canal del ticket y el plugin lo reclamara automaticamente.
 
 ---
 
 ## ⚙️ Cómo se usa
 
-Una vez activado, ve a los ajustes del plugin (icono del engranaje) para configurar tu estrategia:
+Una vez activado, ve a los ajustes del plugin para configurar tu estrategia:
 
 1. **Palabras Clave Exactas:** Escribe las palabras que aparecen en el botón que quieres pulsar (ej. `reclamar, claim, atender`). Sepáralas por comas.
 2. **ID del Canal (Opcional):** Si quieres que solo funcione en un canal específico, pega el ID aquí.
-* *Tip:* Para obtener el ID, activa el "Modo Desarrollador" en Discord, haz clic derecho al canal y dale a "Copiar ID".
-
 
 3. **Delays:** Ajusta el tiempo de espera mínimo y máximo. Un rango de `1000ms` a `2000ms` es ideal para que parezca natural.
-4. **Guardar:** Dale al botón azul y ¡listo! El plugin empezará a vigilar el chat.
+4. **Guardar:** Dale al botón azul.
 
 ---
 
